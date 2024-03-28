@@ -1,0 +1,45 @@
+.login-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 30px 0 0;
+  cursor: pointer;
+}
+.nav-section {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.menu-list {
+  display: flex;
+  list-style-type: none;
+  gap: 25px;
+  margin: 30px 0 50px 0;
+}
+.menu-area {
+  display: flex;  
+  justify-content: center;
+  position: relative;
+}
+.menu-search {
+  position: absolute;
+  top:0;
+  right: 0;
+  margin: 16px 20px;
+}
+input {
+  border: none;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+.new-product {
+  font-size: 11px;
+  height: 20px;
+}
+.card:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+.product-img {
+  display: flex;
+  justify-content: flex-end;
+}
