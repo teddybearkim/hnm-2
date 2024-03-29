@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 function Navbar() {
   const menuList = [
     '여성',
@@ -18,12 +18,19 @@ function Navbar() {
   const goToLogin = () => {
     navigate("/login")
   }
+  const search = (event) => {
+    if (event.key === "Enter") {
+      // 입력한 검색어를 읽어와서 url를 바꿔준다.
+      let keyword = event.target.value;
+      navigate(`?q=${keyword}`)
+    }
+  }
   return (
     <div>
       <div>
         <div className="login-button" onClick={goToLogin}>
           <FontAwesomeIcon icon={faUser} />
-          <div>로그인</div>
+          <div className='login-text'>로그인</div>
         </div>
 
       </div>
@@ -41,7 +48,7 @@ function Navbar() {
 
         <div className="menu-search">
           <FontAwesomeIcon icon={faSearch} />
-          <input type="text" placeholder='검색어를 입력하세요' />
+          <input type="text" className="menu-search-text" OnKeyPress={(event) => search(event)} placeholder='제품 검색' />
         </div>
       </div>
     </div>

@@ -43,3 +43,28 @@ input {
   display: flex;
   justify-content: flex-end;
 }
+.login-container {
+  width: 50%;
+}
+.login-text {
+  margin-left: 10px;
+}
+.menu-search-text {
+  margin-left: 10px;
+}
+.product-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.product-price {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.choice {
+  margin-bottom: 20px;
+}
+.add-button {
+  margin-top: 20px;
+  width: 80px;
+}
+
